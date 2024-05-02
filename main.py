@@ -8,10 +8,9 @@ def findAndReplace(text, oldText, newtext):
             textReplaced = textReplaced + newtext
             # If i find a match i add the substitution and the counter start at the end of the substitution, I don't want to add the same to i and replaced text
             i = i + len(oldText)
-            continue
-
-        textReplaced += text[i]
-        i = i + 1
+        else:
+            textReplaced += text[i]
+            i = i + 1
     return textReplaced
 
 assert findAndReplace('The fox', 'fox', 'dog') == 'The dog'
